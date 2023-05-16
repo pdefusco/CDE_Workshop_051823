@@ -72,6 +72,10 @@ print("\tREAD TABLE(S) COMPLETED")
 # - Remove under aged drivers (less than 16 yrs old)
 #---------------------------------------------------
 before = customer_data.count()
+
+print(customer_data.dtypes)
+print(customer_data.schema)
+
 customer_data = customer_data.filter(col('birthdate') <= F.add_months(F.current_date(),-192))
 after = customer_data.count()
 print(f"\tFILTER DATA (CUSTOMER_DATA): Before({before}), After ({after}), Difference ({after - before}) rows")
