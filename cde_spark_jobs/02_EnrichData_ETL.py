@@ -61,9 +61,9 @@ _DEBUG_ = False
 #---------------------------------------------------
 print("JOB STARTED...")
 car_sales     = spark.sql("SELECT * FROM CDE_WORKSHOP.CAR_SALES_{}".format(username)) #could also checkpoint here but need to set checkpoint dir
-customer_data = spark.sql("SELECT * FROM CDE_WORKSHOP.CAR_INSTALLS_{}".format(username))
-car_installs  = spark.sql("SELECT * FROM CDE_WORKSHOP.EXPERIMENTAL_MOTORS_{}".format(username))
-factory_data  = spark.sql("SELECT * FROM CDE_WORKSHOP.CUSTOMER_DATA_{}".format(username))
+customer_data = spark.sql("SELECT * FROM CDE_WORKSHOP.CUSTOMER_DATA_{}".format(username))
+car_installs  = spark.sql("SELECT * FROM CDE_WORKSHOP.CAR_INSTALLS_{}".format(username))
+factory_data  = spark.sql("SELECT * FROM CDE_WORKSHOP.EXPERIMENTAL_MOTORS_{}".format(username))
 geo_data      = spark.sql("SELECT postalcode as zip, latitude, longitude FROM CDE_WORKSHOP.GEO_DATA_XREF_{}".format(username))
 print("\tREAD TABLE(S) COMPLETED")
 
