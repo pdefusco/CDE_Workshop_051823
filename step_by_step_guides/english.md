@@ -553,7 +553,7 @@ You are now inside the running container. Next, activate the Spark Submit Migrat
 cde-env.sh activate -p vc-1
 ```
 
-Navigate to the .cde folder and place the CDP Access Key ID and Private Key you downloaded earlier in the respective fields.
+Navigate to the .cde folder and place the CDP Access Key ID and Private Key you downloaded earlier in the respective fields in the credentials file.
 
 Next, open the config.yaml file located in the same folder. Replace the cdp console value at line 3 with the CDP Console URL (e.g. `https://console.us-west-1.cdp.cloudera.com/`).
 Then, enter your JOBS_API_URL in the "vcluster-endpoint" field at line 8.
