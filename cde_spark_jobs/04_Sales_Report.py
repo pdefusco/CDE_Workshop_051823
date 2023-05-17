@@ -98,7 +98,7 @@ spark.sql("SELECT * FROM CAR_SALES_TEMP_{}".format(username)).show()
 print("CAR SALES TABLE PARTITIONS BEFORE ALTER PARTITION STATEMENT: ")
 spark.sql("SELECT * FROM spark_catalog.CDE_WORKSHOP.CAR_SALES_{}.PARTITIONS".format(username)).show()
 
-testdf = spark.sql("SELECT * FROM spark_catalog.CDE_WORKSHOP.CAR_SALES_{}"".format(username))
+testdf = spark.sql("SELECT * FROM spark_catalog.CDE_WORKSHOP.CAR_SALES_{}".format(username))
 
 print("-------")
 print(testdf.schema)
