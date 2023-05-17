@@ -49,8 +49,8 @@ username = "pdefusco_020723"
 
 print("Running as Username: ", username)
 
-cde_job_name_05_A = "user05_ace_020723" #Replace with CDE Job Name for Script 5 A
-cde_job_name_05_B = "user05B_ace_020723"  #Replace with CDE Job Name for Script 5 B
+cde_job_name_05_A = "job5555" #Replace with CDE Job Name for Script 5 A
+cde_job_name_05_B = "job555B"  #Replace with CDE Job Name for Script 5 B
 
 #DAG instantiation
 default_args = {
