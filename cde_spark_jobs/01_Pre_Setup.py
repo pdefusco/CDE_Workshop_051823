@@ -76,14 +76,12 @@ geo_data      = spark.read.csv(s3BucketName + "/postal_codes.csv",        header
 #       SQL CLEANUP: DATABASES, TABLES, VIEWS
 #---------------------------------------------------
 #print("JOB STARTED...")
-#spark.sql("DROP DATABASE IF EXISTS {}_CAR_DATA CASCADE".format(username))
-#print("\tDROP DATABASE(S) COMPLETED")
+spark.sql("DROP DATABASE IF EXISTS CDE_WORKSHOP CASCADE")
 
 ##---------------------------------------------------
 ##                 CREATE DATABASES
 ##---------------------------------------------------
-#spark.sql("CREATE DATABASE {}_CAR_DATA".format(username))
-#print("\tCREATE DATABASE(S) COMPLETED")
+spark.sql("CREATE DATABASE CDE_WORKSHOP")
 
 #---------------------------------------------------
 #               POPULATE TABLES
