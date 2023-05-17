@@ -98,13 +98,21 @@ spark.sql("SELECT * FROM CAR_SALES_TEMP_{}".format(username)).show()
 print("CAR SALES TABLE PARTITIONS BEFORE ALTER PARTITION STATEMENT: ")
 spark.sql("SELECT * FROM spark_catalog.CDE_WORKSHOP.CAR_SALES_{}.PARTITIONS".format(username)).show()
 
+testdf = spark.sql("SELECT * FROM spark_catalog.CDE_WORKSHOP.CAR_SALES_{}"".format(username))
+
+print("-------")
+print(testdf.schema)
+print("-------")
+print(testdf.dtypes)
+print("-------")
+
 print("REPLACE PARTITION FIELD MONTH WITH FIELD DAY:")
 print("ALTER TABLE spark_catalog.CDE_WORKSHOP.CAR_SALES_{} REPLACE PARTITION FIELD MONTH WITH DAY".format(username)))
 spark.sql("ALTER TABLE spark_catalog.CDE_WORKSHOP.CAR_SALES_{} REPLACE PARTITION FIELD month WITH day".format(username))
 #spark.sql("ALTER TABLE prod.db.sample ADD PARTITION FIELD month")
 
 print("CAR SALES TABLE PARTITIONS AFTER ALTER PARTITION STATEMENT: ")
-spark.sql("SELECT * FROM spark_catalog.CDE_WORKSHOP.CAR_SALES_{0}.PARTITIONS".format(username)).show()
+spark.sql("SELECT * FROM spark_catalog.CDE_WORKSHOP.CAR_SALES_{}.PARTITIONS".format(username)).show()
 
 #---------------------------------------------------
 #               ICEBERG SCHEMA EVOLUTION
