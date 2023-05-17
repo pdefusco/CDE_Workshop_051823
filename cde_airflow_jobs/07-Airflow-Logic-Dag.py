@@ -59,7 +59,8 @@ default_args = {
         'owner': username,
         'retry_delay': timedelta(seconds=5),
         'depends_on_past': False,
-        'start_date': pendulum.datetime(2020, 1, 1, tz="Europe/Amsterdam")
+        'start_date': pendulum.datetime(2020, 1, 1, tz="Europe/Amsterdam"),
+        'end_date': datetime(2023,9,30,8) #End Date must be in the future
         }
 
 dag_name = '{}-07-airflow-logic-dag'.format(username)
